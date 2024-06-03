@@ -1,7 +1,7 @@
 # WebServer
 用C++实现的高性能WEB服务器，经过webbenchh压力测试可以实现上万的QPS
 
-本项目fork自[markparticle/WebServer]{https://github.com/markparticle/WebServer}
+本项目fork自[markparticle/WebServer](https://github.com/markparticle/WebServer)
 
 在原项目基础上加入了Json配置文件的解析功能
 
