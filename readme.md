@@ -1,6 +1,10 @@
 # WebServer
 用C++实现的高性能WEB服务器，经过webbenchh压力测试可以实现上万的QPS
 
+本项目fork自[markparticle/WebServer]{https://github.com/markparticle/WebServer}
+
+在原项目基础上加入了Json配置文件的解析功能
+
 ## 功能
 * 利用IO复用技术Epoll与线程池实现多线程的Reactor高并发模型；
 * 利用正则与状态机解析HTTP请求报文，实现处理静态资源的请求；
@@ -44,6 +48,7 @@
 ├── build          
 │   └── Makefile
 ├── Makefile
+├── config.json    配置文件
 ├── LICENSE
 └── readme.md
 ```
@@ -90,7 +95,6 @@ make
 * QPS 10000+
 
 ## TODO
-* config配置
 * 完善单元测试
 * 实现循环缓冲区
 
