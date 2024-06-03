@@ -1,0 +1,16 @@
+{
+    "port": 8080,
+    "resources_path": "resources/",
+    "trigMode": 3,
+    "timeoutMS": 60000,
+    "OptLinger": false,
+    "sqlPort": 3306,
+    "sqlUser": "root",
+    "sqlPwd": "00000000",
+    "dbName": "WebServer",
+    "connPoolNum": 16,
+    "threadNum": 8,
+    "openLog": true,
+    "logLevel": 1,
+    "logQueSize": 1024
+}
