@@ -7,79 +7,93 @@
 <html lang="en">
 
 <head>
-
-     <meta charset="UTF-8">
-
-     <title>MARK-首页</title>
-     <link rel="icon" href="images/favicon.ico">
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/animate.css">
-     <link rel="stylesheet" href="css/magnific-popup.css">
-     <link rel="stylesheet" href="css/font-awesome.min.css">
-
-     <!-- Main css -->
-     <link rel="stylesheet" href="css/style.css">
-
+    <meta charset="UTF-8">
+    <title>tiny-webserver</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+    <!-- PRE LOADER -->
+    <div class="preloader">
+        <div class="spinner">
+            <span class="spinner-rotate"></span>
+        </div>
+    </div>
 
-     <!-- PRE LOADER -->
-     <div class="preloader">
-          <div class="spinner">
-               <span class="spinner-rotate"></span>
-          </div>
+    <!-- NAVIGATION SECTION -->
+    <div class="navbar custom-navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+                <!-- LOGO TEXT HERE -->
+                <a href="/" class="navbar-brand">Tiny-WebServer</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="smoothScroll" href="/" style="font-size: 18px;">首页</a></li>
+                    <li><a class="smoothScroll" href="./picture.html" style="font-size: 18px;">图片</a></li>
+                    <li><a class="smoothScroll" href="./video.html" style="font-size: 18px;">视频</a></li>
+                    <li><a class="smoothScroll" href="./login.html" style="font-size: 18px;">登录</a></li>
+                    <li><a class="smoothScroll" href="./register.html" style="font-size: 18px;">注册</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- HOME SECTION -->
+<section id="home" class="d-flex justify-content-center align-items-center">
+     <div class="container">
+         <div class="row">
+             <div class="col-md-offset-1 col-md-2 col-sm-3 mb-4">
+                 <img src="images/profile-image.jpg" class="wow fadeInUp img-responsive img-circle" data-wow-delay="0.2s" alt="about image">
+             </div>
+             <div class="col-md-8 col-sm-8">
+                 <h1 class="wow fadeInUp" data-wow-delay="0.6s" style="font-size: 36px;">软件工程15组-TinyWebServer</h1>
+                 <h2 class="wow fadeInUp" data-wow-delay="0.8s" style="font-size: 24px;">项目介绍</h2>
+                 <p class="wow fadeInUp" data-wow-delay="1.0s" style="font-size: 18px;">TinyWebServer 是一个轻量级的 Web 服务器,实现了 HTTP 协议的基本功能。它可以处理静态资源的请求,支持 CGI 脚本,并且具有线程池和定时器等模块。</p>
+                 <h2 class="wow fadeInUp" data-wow-delay="1.2s" style="font-size: 24px;">实现功能</h2>
+                 <ul class="wow fadeInUp" data-wow-delay="1.4s" style="font-size: 18px;">
+                     <li>使用 线程池 + 非阻塞socket + epoll(ET和LT均实现) + 事件处理(Reactor和模拟Proactor均实现) 的并发模型</li>
+                     <li>2.使用状态机解析HTTP请求报文，支持解析GET和POST请求</li>
+                     <li>3.访问服务器数据库实现web端用户注册、登录功能,可以请求服务器图片和视频文件</li>
+                     <li>4.实现同步/异步日志系统,记录服务器运行状态</li>
+                 </ul>
+                 <h2 class="wow fadeInUp" data-wow-delay="1.8s" style="font-size: 24px;">组员信息</h2>
+                 <p class="wow fadeInUp" data-wow-delay="1.8s" style="font-size: 18px; margin-bottom: 10px;">
+                     <strong>薛梵煜(组长) - 21009200256</strong>
+                 </p>
+                 <p class="wow fadeInUp" data-wow-delay="1.8s" style="font-size: 18px; margin-bottom: 10px;">
+                     <strong>严文瑞 - 21009201097</strong>
+                 </p>
+                 <p class="wow fadeInUp" data-wow-delay="1.8s" style="font-size: 18px; margin-bottom: 10px;">
+                     <strong>董子豪 - 21009201028</strong>
+                 </p>
+                 <p class="wow fadeInUp" data-wow-delay="1.8s" style="font-size: 18px; margin-bottom: 10px;">
+                     <strong>刘士暄 - 21009200695</strong>
+                 </p>
+             </div>
+         </div>
      </div>
+ </section>
 
-
-     <!-- NAVIGATION SECTION -->
-     <div class="navbar custom-navbar navbar-fixed-top" role="navigation">
-          <div class="container">
-
-               <div class="navbar-header">
-                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                    </button>
-                    <!-- lOGO TEXT HERE -->
-                    <a href="/" class="navbar-brand">Mark</a>
-               </div>
-               <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                         <li><a class="smoothScroll" href="/">首页</a></li>
-                         <li><a class="smoothScroll" href="/picture">图片</a></li>
-                         <li><a class="smoothScroll" href="/video">视频</a></li>
-                         <li><a class="smoothScroll" href="/login">登录</a></li>
-                         <li><a class="smoothScroll" href="/register">注册</a></li>
-                    </ul>
-               </div>
-
-          </div>
-     </div>
-     <!-- HOME SECTION -->
-     <section id="home">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-offset-1 col-md-2 col-sm-3">
-                         <img src="images/profile-image.jpg" class="wow fadeInUp img-responsive img-circle"
-                              data-wow-delay="0.2s" alt="about image">
-                    </div>
-                    <div class="col-md-8 col-sm-8">
-                         <h1 class="wow fadeInUp" data-wow-delay="0.6s">你好，这是首页。</h1>                    
-                    </div>
-               </div>
-          </div>
-     </section>
-     <!-- SCRIPTS -->
-     <script src="js/jquery.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/jquery.magnific-popup.min.js"></script>
-     <script src="js/magnific-popup-options.js"></script>
-     <script src="js/wow.min.js"></script>
-     <script src="js/custom.js"></script>
+    <!-- SCRIPTS -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/custom.js"></script>
 </body>
 
 </html>
